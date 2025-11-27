@@ -9,6 +9,10 @@ use MoonShine\ColorManager\Palettes\PurplePalette;
 use MoonShine\ColorManager\ColorManager;
 use MoonShine\Contracts\ColorManager\ColorManagerContract;
 use MoonShine\Contracts\ColorManager\PaletteContract;
+use App\MoonShine\Resources\QuestionnaireCategory\QuestionnaireCategoryResource;
+use MoonShine\MenuManager\MenuItem;
+use App\MoonShine\Resources\Questionnaire\QuestionnaireResource;
+use App\MoonShine\Resources\Question\QuestionResource;
 
 final class MoonShineLayout extends AppLayout
 {
@@ -28,6 +32,8 @@ final class MoonShineLayout extends AppLayout
     {
         return [
             ...parent::menu(),
+            MenuItem::make(QuestionnaireCategoryResource::class, 'Категории опросов'),
+            MenuItem::make(QuestionnaireResource::class, 'Опросы'),
         ];
     }
 

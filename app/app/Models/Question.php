@@ -19,4 +19,11 @@ class Question extends Model
     public function answers() {
         return $this->hasMany(Answer::class);
     }
+    public static function getTypes(): array
+    {
+        return [
+            'scale' => 'Шкала',
+            'text' => 'Текст',
+        ];
+    }
 }

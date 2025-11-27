@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('text');
             $table->foreignId('questionnaire_id')->constrained(table: 'questionnaires')->cascadeOnDelete()->cascadeOnUpdate();
             $table->enum('type', ['scale', 'text',]);
+            $table->timestamps();
         });
     }
 

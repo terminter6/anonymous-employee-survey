@@ -33,3 +33,4 @@ class Dashboard extends Page
 		return [];
 	}
 }
+

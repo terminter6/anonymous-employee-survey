@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('question_id')->constrained(table: 'questions')->cascadeOnDelete()->cascadeOnUpdate();
             $table->integer('scale_value')->nullable();
             $table->string('text_value')->nullable();
+            $table->timestamps();
         });
     }
 
