@@ -10,17 +10,12 @@ use MoonShine\UI\Components\Table\TableBuilder;
 use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Laravel\QueryTags\QueryTag;
 use MoonShine\UI\Components\Metrics\Wrapped\Metric;
-use MoonShine\UI\Fields\ID;
 use App\MoonShine\Resources\Questionnaire\QuestionnaireResource;
 use MoonShine\Support\ListOf;
 use MoonShine\UI\Fields\Text;
 use MoonShine\UI\Fields\Select;
 use App\Models\QuestionnaireCategory;
-use App\MoonShine\Resources\Question\QuestionResource;
-use MoonShine\Laravel\Fields\Relationships\HasMany;
-use App\Models\Question;
 use Throwable;
-
 /**
  * @extends IndexPage<QuestionnaireResource>
  */
@@ -31,6 +26,8 @@ class QuestionnaireIndexPage extends IndexPage
     /**
      * @return list<FieldContract>
      */
+
+
     protected function fields(): iterable
     {
         return [
